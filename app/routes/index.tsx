@@ -1,7 +1,10 @@
 import { LoaderFunction } from "remix"
 
 export let loader: LoaderFunction = async () => {
-  throw new Error("Sentry error test");
+  setTimeout(() => {
+    
+    throw new Error("Sentry error test");
+  }, 2000)
 
   return null;
 }
