@@ -3,7 +3,7 @@ import * as Sentry from "@sentry/remix"
 
 export let loader: LoaderFunction = async ({request}) => {
 
-  // console.log(Sentry.getCurrentHub().getScope())
+  console.log(Sentry.getCurrentHub().getScope())
   throw new Error("Sentry Error")
 
   return null;
