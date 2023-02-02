@@ -40,7 +40,7 @@ function App() {
   );
 }
 
-export default withSentry(App);
+export default App();
 
 function Document({ children, title }: { children: React.ReactNode; title?: string }) {  
   return (    
