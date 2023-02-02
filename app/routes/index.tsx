@@ -1,7 +1,7 @@
 import { LoaderFunction } from "remix"
 import * as Sentry from "@sentry/remix"
 
-export let loader = async () => {
+export const loader = async () => {
 
   throw new Error("Sentry Error")
 
