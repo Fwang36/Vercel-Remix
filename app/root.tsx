@@ -1,17 +1,17 @@
-import {
-  json,
-  Links,
-  LiveReload,
-  LoaderFunction,
-  Meta,
-  Outlet,
-  redirect,
-  Scripts,
-  ScrollRestoration,
-  useCatch,
-  useLoaderData,
-} from "remix";
-import type { LinksFunction } from "remix";
+// import {
+//   json,
+//   Links,
+//   LiveReload,
+//   LoaderFunction,
+//   Meta,
+//   Outlet,
+//   redirect,
+//   Scripts,
+//   ScrollRestoration,
+//   useCatch,
+//   useLoaderData,
+// } from "remix";
+// import type { LinksFunction } from "remix";
 
 import styles from "./styles/app.css";
 
@@ -22,11 +22,11 @@ import { useEffect } from "react";
 import { withSentry } from "@sentry/remix";
 
 // https://remix.run/api/app#links
-export let links: LinksFunction = () => {
-  return [
-    { rel: "preload", href: styles, as: "style" },
-  ];
-};
+// export let links: LinksFunction = () => {
+//   return [
+//     { rel: "preload", href: styles, as: "style" },
+//   ];
+// };
 
 
 // https://remix.run/api/conventions#default-export
@@ -34,7 +34,7 @@ export let links: LinksFunction = () => {
 function App() {
   return (
     <Document>      
-      <Outlet />
+      {/* <Outlet /> */}
       <Analytics />
     </Document>
   );
@@ -50,14 +50,14 @@ function Document({ children, title }: { children: React.ReactNode; title?: stri
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
         {title ? <title>{title}</title> : <title>ECA - The Esports Coaching Academy</title>}
-        <Meta />
-        <Links />
+        {/* <Meta />
+        <Links /> */}
       </head>
       <body className='h-full'>
         {children}
-        <ScrollRestoration />
-        <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {/* <ScrollRestoration />
+        <Scripts /> */}
+        {/* {process.env.NODE_ENV === "development" && <LiveReload />} */}
       </body>
     </html>    
   );

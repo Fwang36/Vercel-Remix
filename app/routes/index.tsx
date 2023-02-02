@@ -1,9 +1,8 @@
-import { LoaderFunction } from "remix"
 import * as Sentry from "@sentry/remix"
+import {LoaderFunction} from "@remix-run/node"
+export let loader: LoaderFunction = async () => {
 
-export const loader = async () => {
-
-  throw new Error("Sentry Error")
+  throw new Error("Sentry error test");
 
   return null;
 }

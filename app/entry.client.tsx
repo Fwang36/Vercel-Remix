@@ -1,5 +1,5 @@
 import { hydrate } from "react-dom";
-import { RemixBrowser } from "remix";
+// import { RemixBrowser } from "remix";
 import { useLocation, useMatches } from "@remix-run/react";
 import * as Sentry from "@sentry/remix";
 import { useEffect } from "react";
@@ -19,4 +19,4 @@ Sentry.init({
   ],
 });
 
-hydrate(<RemixBrowser />, document);
+// hydrate(<RemixBrowser />, document);
